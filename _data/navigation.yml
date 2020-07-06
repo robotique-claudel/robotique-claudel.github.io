@@ -1,0 +1,7 @@
+- name: Présentation
+  link: /
+  icon: home
+- name: A propos
+  link: /about
+  icon: more
+

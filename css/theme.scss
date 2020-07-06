@@ -1,0 +1,25 @@
+---
+---
+$primary-color: #397edd;
+$secondary-color: #e6352a;
+
+
+body {
+    background-color: #eeeeee;
+    margin: 0px;
+}
+
+:root {
+  --mdc-theme-primary: #{$primary-color};
+  --mdc-theme-secondary: #{$secondary-color};
+}
+
+.mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {
+  color: #{$secondary-color};
+}
+.mdc-drawer .mdc-list-item--activated {
+  color: #{$secondary-color};
+  .mdc-list-item__graphic {
+    color: #{$secondary-color};
+  }
+}

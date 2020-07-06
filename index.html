@@ -1,11 +1,55 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Documentation</title>
-    </head>
-    <body>
-        <h1>Hello</h1>
-    </body>
-</html>
+---
+layout: default
+title: Home
+---
+<h2 class="mdc-typography--headline2">Projets en Cours</h2>
+<div class="project-cards">
+    {% for item in site.data.projects %}
+        <div class="mdc-card mdc-elevation--z12">
+            <div class="mdc-card__primary-action" tabindex="0">
+                
+                <div class="mdc-card__media mdc-card__media--16-9"
+                    style="background-image: url(&quot;{{ item.image-url }}&quot;);">
+                    <a href="{{  item.lien-interne }}" class=button-link>
+                        <div class="mdc-card__media-content">
+                            <div class="mdc-card__primary">
+                                <h2 class="mdc-card__title mdc-typography mdc-typography--headline6">{{ item.nom }}</h2>
+                                <h3 class="mdc-card__subtitle mdc-typography mdc-typography--subtitle2">{{ item.auteurs }}</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="mdc-typography mdc-typography--body1">
+                {{ item.description }}
+            </div>
+            <div class="mdc-card__actions">
+                <div class="mdc-card__action-buttons">
+                    <a href="{{  item.lien-interne }}" class=button-link>
+                        <button class="mdc-button mdc-card__action mdc-card__action--button"> <span
+                                class="mdc-button__ripple"></span> Plus</button>
+                    </a>
+                    <a href="/documentation/{{ item.lien-interne }}" class=button-link>
+                    <button class="mdc-button mdc-card__action mdc-card__action--button"> <span
+                            class="mdc-button__ripple"></span> Documentation</button>
+                    </a>
+                </div>
+                <div class="mdc-card__action-icons">
+                    <a  href="{{ item.lien }}"  target="_blank">
+                        <button class="mdc-icon-button material-icons mdc-card__action mdc-card__action--icon--unbounded"
+                            title="Share" data-mdc-ripple-is-unbounded="true">code</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+
+
+<script>
+
+    const selector = '.mdc-button, .mdc-icon-button, .mdc-card__primary-action';
+    const ripples = [].map.call(document.querySelectorAll(selector), function (el) {
+        return new mdc.ripple.MDCRipple(el);
+    });
+</script>

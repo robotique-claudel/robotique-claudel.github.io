@@ -1,0 +1,39 @@
+---
+---
+
+.mdc-card {
+    padding: 16px;
+    margin-top: 12px;
+}
+
+label {
+    cursor: pointer;
+}
+
+.project-cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    margin: 24px;
+
+    .mdc-card {
+        flex-shrink: 1;
+
+        margin: 12px;
+        width: 600px;
+        min-width: 300px;
+        .mdc-card__media-content {
+            color: white;
+            .mdc-card__primary {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                margin-right: 8px;
+            }
+        }
+        .button-link {
+            text-decoration: none;
+        }
+    }
+}

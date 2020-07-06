@@ -1,0 +1,20 @@
+- nom: Robot
+  image-url: assets/cube.jpg
+  description: Projet de robotique
+  lien: https://github.com/robotique-claudel/club1-robotique
+  lien-interne: /robot
+  auteurs: 4e
+
+- nom: Ville
+  image-url: assets/mesh.png
+  description: Projet de robotique
+  lien: https://github.com/robotique-claudel/club2-ville
+  lien-interne: /ville
+  auteurs: ..
+
+- nom: Voiture
+  image-url: assets/cube.jpg
+  description: Projet de robotique
+  lien: https://github.com/robotique-claudel/club3-voiture
+  lien-interne: /voiture
+  auteurs: ..
